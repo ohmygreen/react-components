@@ -1,0 +1,170 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import color_pallete from './resources/color_pallete.png';
+import color_guidelines from './resources/color_guidelines.png';
+
+<Meta title="DOCS/Colors" />
+
+# Garten brand colors
+
+For our internal tools, we will use Garten brand colors sparingly as they don’t quite lend
+themselves to a comprehensive and accessible palette.
+
+<img src={color_pallete} />
+
+# Core UI colors
+
+## Greys
+
+Greys make up the core UI elements of our products, like page backgrounds, borders, etc.
+This palette is made up of “cool” greys that are created using the same hue as the dark teal Garten brand color.
+
+- To maintain “cool” hues across the UI, **we will use Grey 900 instead of pure black whenever transparency values are needed.**
+  - Ex. Primary text: Grey 900 @ 90%
+  - Ex. Hover state: Grey 900 @ 5%
+
+grey-900: #0a0c0d
+grey-800: #2b2c2d
+grey-700: #484a4b
+grey-600: #646869
+grey-500: #818587
+grey-400: #9ea3a5
+grey-300: #bcc1c3
+grey-200: #dadfe1
+grey-100: #e9eef0
+grey-50: #f5f9fa
+
+## Other colors
+
+The extended palette contains the full spectrum of the semantic colors. These should be used very sparingly, and ideally, we would only use a couple from each set.
+
+<table>
+  <thead>
+    <tr>
+      <td>Reds</td>
+      <td>Yellows</td>
+      <td>Greens</td>
+      <td>Blues</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>red-900: #b71c1c</td>
+      <td>yellow-900: #ff6f00</td>
+      <td>green-900: #00682f</td>
+      <td>blue-900: #0d47a1</td>
+    </tr>
+    <tr>
+      <td>red-800: #c62828</td>
+      <td>yellow-800: #ff8f00</td>
+      <td>green-800: #018843</td>
+      <td>blue-800: #1565c0</td>
+    </tr>
+    <tr>
+      <td>red-700: #d32f2f</td>
+      <td>yellow-700: #ffa000</td>
+      <td>green-700: #0d994f</td>
+      <td>blue-700: #1976d2</td>
+    </tr>
+    <tr>
+      <td>red-600: #e53935</td>
+      <td>yellow-600: #ffb300</td>
+      <td>green-600: #1bac5b</td>
+      <td>blue-600: #1e88e5</td>
+    </tr>
+    <tr>
+      <td>red-500: #f44336</td>
+      <td>yellow-500: #ffc107</td>
+      <td>green-500: #23bc65</td>
+      <td>blue-500: #2196f3</td>
+    </tr>
+    <tr>
+      <td>red-400: #ef5350</td>
+      <td>yellow-400: #ffca28</td>
+      <td>green-400: #4fc67e</td>
+      <td>blue-400: #42a5f5</td>
+    </tr>
+    <tr>
+      <td>red-300: #e57373</td>
+      <td>yellow-300: #ffd54f</td>
+      <td>green-300: #72d194</td>
+      <td>blue-300: #64b5f6</td>
+    </tr>
+    <tr>
+      <td>red-200: #ef9a9a</td>
+      <td>yellow-200: #ffe08</td>
+      <td>green-200: #9dddb3</td>
+      <td>blue-200: #90caf9</td>
+    </tr>
+    <tr>
+      <td>red-100: #ffcdd2</td>
+      <td>yellow-100: #ffecb3</td>
+      <td>green-100: #c5ebd0</td>
+      <td>blue-100: #bbdefb</td>
+    </tr>
+    <tr>
+      <td>red-50: #ffebee</td>
+      <td>yellow-50: #fff8e1</td>
+      <td>green-50: #e6f8ec</td>
+      <td>blue-50: #e3f2fd</td>
+    </tr>
+  </tbody>
+</table>
+
+## Semantic colors
+
+#### Positive
+
+This includes success states, positive/good numerical values, etc
+
+- color-positive: green-800;
+- color-positive-bg: green-50;
+
+#### Negative
+
+This includes error states, negative/bad numerical values, etc.
+
+- color-negative: red-800;
+- color-negative-bg: red-50;
+
+#### Warning
+
+This includes warnings/alerts that aren’t necessarily errors
+These values should only be used on a dark background or as a background with dark text
+
+- color-warning: yellow-800;
+
+#### Info
+
+This includes links and other informative UI elements
+
+- color-info: blue-800;
+- color-info-bg: blue-50;
+
+You should pay close attention to the application of these colors to maintain accessibility standards. Refer to the image below to understand how you can use each color…
+
+- Normal text (smaller Aa) refers to text size 24px or less and should have a contrast ratio of 4.5:1 or higher
+  Large text (bigger Aa) refers to text larger than 24px OR 18px and above when bolded
+- The star represents UI elements, like icons
+- Large text and UI elements should have a contrast ratio of 3:1 or higher
+
+<img alt="Color Guidelines" src={color_guidelines} />
+
+# Text & icon colors
+
+Our text colors will be created using white and Grey-900, along with opacity values to create secondary and disabled styles.
+
+## Dark
+
+- text-dark-primary: grey-900; @ 90% opacity
+- text-dark-secondary: grey-900; @ 65% opacity
+- text-dark-disabled: blue-50; @ 40% opacity
+
+The disabled grey is not accessible, however, According to WCAG 2.0, inactive elements do not need to meet contrast standards. With that said, we should use this value sparingly.
+
+## Light
+
+- text-light-primary: white; @ 100% opacity
+- text-light-secondary: white; @ 65% opacity
+- text-light-disabled: white; @ 40% opacity
+
+_It is usually recommended to avoid pure white on pure black, but since we are using a dark grey instead of pure black, we can use white @ 100% opacity instead of 90% as we did with the dark colors_

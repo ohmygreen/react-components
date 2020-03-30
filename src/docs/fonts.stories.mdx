@@ -1,0 +1,76 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import fonts_example from './resources/fonts_example.png';
+import garten_font_example from './resources/garten_font_example.png';
+import font_styles_example from './resources/font_styles_example.png';
+import text_colors_example from './resources/text_colors_example.png';
+import strong_font_example from './resources/strong_font_example.png';
+import italic_font_example from './resources/italic_font_example.png';
+
+<Meta title="DOCS/Fonts" />
+
+# Typefaces
+
+For our internal tools, we utilize the “System font stack” that uses the default font for whatever operating system a user is using. For example, Mac users will see the default font, San Francisco, and Windows users will see Segoe UI. Using the system font stack helps boost performance (since we don’t need to load any custom fonts), and also provides a more native-feeling experience for users.
+
+`font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;`
+
+Examples of different OS default fonts…
+
+<img style={{ width: '450px' }} alt="Fonts Example" src={fonts_example} />
+
+In rare cases, we may utilize the Garten brand typeface, Mark Pro, for branded elements.
+
+<img style={{ width: '350px' }} alt="Garten Fonts Example" src={garten_font_example} />
+
+# Font styles
+
+Each font style is created by choosing a font size,
+line height, and font weight. Font color should be a
+separate property that can be applied to any font style.
+When designing, we can utilize the default pixel values as defined below.
+For development we should utilize “rem” units (see explanation below chart).
+The same goes for line height — use the pixel values when designing,
+but in development we can use unit-less values that create proportionate line heights
+depending on font size.
+
+<img style={{ width: '750px' }} alt="Font Styles Example" src={font_styles_example} />
+
+**For development**, we should use “rem” as the font size unit. Rem,
+or “root em” is a unit relative to the root — or the html — element.
+Most browsers have a default font size of 16px, but some users will increase their
+browser font size (not just zoom in on the page) for accessibility reasons.
+If we set our html font size to be 100% and then use rems to define our font sizes,
+then we are allowing our users to define the base size for all our font styles
+(this is a good thing). For example,
+if we set our Body 1 font size to 1rem, by default that will result in a 16px size font.
+If the user increases their base browser font size to 18px, then 1rem now equals 18px.
+This increase in size will then populate throughout all our font styles to scale
+everything accordingly.
+
+# Text Colors
+
+<img style={{ width: '500px' }} alt="Text Colors Example" src={text_colors_example} />
+
+# Additional formatting
+
+Sometimes you may want to emphasize a certain string of text to add clarity or
+communicate importance to the user — this is usually done by using bold
+or italicized styling. To allow these format changes to be understood by screen readers,
+we should use the `<strong>` and `<emphasis>` tags (rather than `<b>` and `<i>`).
+
+Note: These style variations should be used sparingly, and primarily in context of a larger block of text
+
+#### Strong
+
+The `<strong>` tag will render the font in bold. Use this
+specifically when conveying information that is extra important to the user
+
+<img style={{ width: '400px' }} alt="Strong Font Example" src={strong_font_example} />
+
+#### Emphasis
+
+The `<emphasis>` tag will render the font in italics.
+Use this in cases where the information is not necessarily vital to the user’s experience,
+but you still want to visually emphasize a portion of text
+
+<img style={{ width: '400px' }} alt="Emphasis Font Example" src={italic_font_example} />
