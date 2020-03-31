@@ -9,5 +9,9 @@ module.exports = {
         sourceLoaderOptions: null,
       },
     },
+    '@storybook/addon-actions',
+    '@storybook/addon-links',
+    '@storybook/addon-storysource',
+    '@storybook/addon-knobs',
   ],
 };
