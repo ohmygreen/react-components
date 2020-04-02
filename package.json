@@ -5,6 +5,8 @@
   "main": "index.js",
   "author": "Nemanja Lazarevic - ohmygreen",
   "scripts": {
+    "build": "npm run build-storybook",
+    "start": "http-server storybook-static",
     "release": "npm run build:dev && npm run build:prod",
     "build:dev": "NODE_ENV=development rollup -c",
     "build:prod": "NODE_ENV=production rollup -c",
@@ -47,5 +49,11 @@
     "hooks": {
       "pre-commit": "npm run release"
     }
+  },
+  "dependencies": {
+    "http-server": "^0.12.1"
+  },
+  "engines": {
+    "node": "6.11.4"
   }
 }
