@@ -5,7 +5,7 @@
   "main": "index.js",
   "author": "Nemanja Lazarevic - ohmygreen",
   "scripts": {
-    "build": "npm run build-storybook",
+    "heroku-build": "npm run build-storybook",
     "start": "http-server storybook-static",
     "release": "npm run build:dev && npm run build:prod",
     "build:dev": "NODE_ENV=development rollup -c",
