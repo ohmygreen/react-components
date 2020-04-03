@@ -9,7 +9,8 @@
     "build:dev": "NODE_ENV=development rollup -c",
     "build:prod": "NODE_ENV=production rollup -c",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "heroku-postbuild": "npm run build-storybook"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
