@@ -1,5 +1,15 @@
 import React from 'react';
 import { addDecorator } from '@storybook/react';
-import { GlobalStyle } from '../src/shared/global';
+import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 
-addDecorator(story => <GlobalStyle>{story()}</GlobalStyle>);
+import { GlobalStyle, materialUiPalette } from '../src/shared';
+
+const theme = createMuiTheme({
+  palette: materialUiPalette,
+});
+
+addDecorator((story) => (
+  <GlobalStyle>
+    <ThemeProvider theme={theme}> {story()}</ThemeProvider>
+  </GlobalStyle>
+));

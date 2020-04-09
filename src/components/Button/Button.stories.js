@@ -14,6 +14,11 @@ export default {
 export const ButtonComponent = () => (
   <Button
     text={text('text', 'Default')}
+    color={select(
+      'color',
+      { default: 'default', inherit: 'inherit', primary: 'primary', secondary: 'secondary' },
+      'primary'
+    )}
     variant={select(
       'variant',
       { contained: 'contained', outlined: 'outlined', text: 'text' },
@@ -23,13 +28,8 @@ export const ButtonComponent = () => (
     fullWidth={boolean('fullWidth', false)}
     disableRipple={boolean('disableRipple', false)}
     disableFocusRipple={boolean('disableFocusRipple', false)}
-    disableElevation={boolean('disableElevation', false)}
+    disableElevation={boolean('disableElevation', true)}
     disabled={boolean('disabled', false)}
-    color={select(
-      'color',
-      { default: 'default', inherit: 'inherit', primary: 'primary', secondary: 'secondary' },
-      'default'
-    )}
   />
 );
 export const Contained = () => <Button text="Contained" variant="contained" />;
