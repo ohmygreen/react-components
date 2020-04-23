@@ -8,26 +8,26 @@ import TextField from './TextField';
 
 export default {
   title: 'Design System/Atoms/TextField',
-  decorators: [centered, withActions('onChange'), withKnobs],
+  decorators: [centered, withActions('onChange'), withKnobs]
 };
 
 const currencies = [
   {
     value: 'USD',
-    label: '$',
+    label: '$'
   },
   {
     value: 'EUR',
-    label: '€',
+    label: '€'
   },
   {
     value: 'BTC',
-    label: '฿',
+    label: '฿'
   },
   {
     value: 'JPY',
-    label: '¥',
-  },
+    label: '¥'
+  }
 ];
 export const TextFieldComponent = () => {
   const isSelect = boolean('select', false);
@@ -74,6 +74,15 @@ export const Filled = () => <TextField label="Filled" variant="filled" />;
 export const Outlined = () => <TextField label="Outlined" variant="outlined" />;
 export const Required = () => <TextField label="Required" variant="outlined" required />;
 export const Disabled = () => <TextField label="Disabled" variant="outlined" disabled />;
+export const ReadOnly = () => (
+  <TextField
+    label="Read only"
+    variant="outlined"
+    helperText="read only input"
+    inputProps={{ readOnly: true }}
+    value={"You can't edit me"}
+  />
+);
 export const WithDescription = () => (
   <TextField label="Helper text" variant="outlined" helperText="Some important text" />
 );
@@ -86,7 +95,7 @@ export const Select = () => (
     select
     helperText="Please select your currency"
     SelectProps={{
-      native: true,
+      native: true
     }}
   >
     {currencies.map(option => (

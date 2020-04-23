@@ -1,0 +1,22 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import * as Icons from '../icons';
+import Tooltip from '../components/Tooltip/Tooltip';
+import {iconTitle} from '../helpers/iconTitle.js';
+
+<Meta title="DOCS/Icons" />
+
+# Icons
+
+### Sizing
+
+We will currently support icon sizes of 20x20 and 24x24.  
+When an icon is placed inside a button, we will use 20x20  
+When an icon is by itself, we should use 24x24
+
+### Icon Set
+
+###### Core
+
+<Tooltip title={iconTitle("AddIcon")}>
+  <Icons.AddIcon />
+</Tooltip>
