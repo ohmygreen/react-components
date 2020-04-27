@@ -1,5 +1,5 @@
 import React from 'react';
-import { withActions } from '@storybook/addon-actions';
+import { action } from '@storybook/addon-actions';
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 
 import centered from '@storybook/addon-centered/react';
@@ -14,6 +14,18 @@ export default {
 
 export const IconComponent = () => (
   <Icon>
+    <VisibilityIcon />
+  </Icon>
+);
+
+export const Colored = () => (
+  <Icon pathColor={'red'}>
+    <VisibilityIcon />
+  </Icon>
+);
+
+export const OnClick = () => (
+  <Icon onClick={action('clicked!')}>
     <VisibilityIcon />
   </Icon>
 );

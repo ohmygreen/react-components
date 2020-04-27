@@ -6,6 +6,7 @@ const IconStyled = styled.div`
       fill: ${(props) => (props.pathColor ? props.pathColor : '')};
     }
   }
+  cursor: ${(props) => (!!props.onClick ? 'pointer' : 'auto')};
 `;
 
 export default IconStyled;
