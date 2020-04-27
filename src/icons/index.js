@@ -5,10 +5,10 @@ import UnfoldLessIcon from './icon-ic-unfold-less.svg';
 import TrendingUpIcon from './icon-ic-trending-up.svg';
 import TrendingNeutralIcon from './icon-ic-trending-neutral.svg';
 import TrendingDownIcon from './icon-ic-trending-down.svg';
-import ThumpUpDownIcon from './icon-ic-thumbs-up-down.svg';
+import ThumbsUpDownIcon from './icon-ic-thumbs-up-down.svg';
 import ThumbUpIcon from './icon-ic-thumb-up.svg';
 import ThumbDownIcon from './icon-ic-thumb-down.svg';
-import TextSmsIcon from './icon-ic-textsms.svg';
+import TextsmsIcon from './icon-ic-textsms.svg';
 import StoreMallDirectoryIcon from './icon-ic-store-mall-directory.svg';
 import StarIcon from './icon-ic-star.svg';
 import SignalWifiOffIcon from './icon-ic-signal-wifi-off.svg';
@@ -28,7 +28,7 @@ import RadioButtonOffIcon from './icon-ic-radio-button-off.svg';
 import PlaylistAddIcon from './icon-ic-playlist-add.svg';
 import PlaceIcon from './icon-ic-place.svg';
 import PinDropIcon from './icon-ic-pin-drop.svg';
-import PersonIcon from './icon-ic-person-add.svg';
+import PersonIcon from './icon-ic-person.svg';
 import PersonAddIcon from './icon-ic-person-add.svg';
 import PersonOutlineIcon from './icon-ic-person-outline.svg';
 import PeopleIcon from './icon-ic-people.svg';
@@ -211,10 +211,10 @@ export {
   SignalWifiOffIcon,
   StarIcon,
   StoreMallDirectoryIcon,
-  TextSmsIcon,
+  TextsmsIcon,
   ThumbDownIcon,
   ThumbUpIcon,
-  ThumpUpDownIcon,
+  ThumbsUpDownIcon,
   TrendingDownIcon,
   TrendingNeutralIcon,
   VisibilityIcon,

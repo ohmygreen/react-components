@@ -8,6 +8,7 @@ const TooltipStyled = withStyles((theme) => ({
     boxShadow: theme.shadows[3],
     fontSize: 11,
     padding: '16px 10px',
+    maxWidth: 'none',
   },
   arrow: {
     color: theme.palette.common.white,

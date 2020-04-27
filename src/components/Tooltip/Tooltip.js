@@ -11,7 +11,6 @@ const Tooltip = ({ children, title, placement = 'top', ...props }) => {
       title={<TooltipTitle title={title} />}
       placement={placement}
       interactive
-      open={true}
       arrow
       {...props}
     >
