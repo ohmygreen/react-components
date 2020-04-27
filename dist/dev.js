@@ -217,7 +217,7 @@ var Button = function Button(_ref) {
 };
 
 function _templateObject$3() {
-  var data = _taggedTemplateLiteral(["\n  svg {\n    path {\n      fill: ", ";\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  svg {\n    path {\n      fill: ", ";\n    }\n  }\n  cursor: ", ";\n"]);
 
   _templateObject$3 = function _templateObject() {
     return data;
@@ -227,6 +227,8 @@ function _templateObject$3() {
 }
 var IconStyled = styled.div(_templateObject$3(), function (props) {
   return props.pathColor ? props.pathColor : '';
+}, function (props) {
+  return !!props.onClick ? 'pointer' : 'auto';
 });
 
 var VisibilityIcon = function VisibilityIcon(props) {
