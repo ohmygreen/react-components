@@ -82,10 +82,14 @@ This will create a new tag which can be used to to download exactly this version
 ** Once the feature PR has been approved and merged make sure to up the version on the master accordingly**
 
 ```
-git checkout master     # checkout to master branch
-git pull                # pull the latest changes
-npm version patch       # up the patch version
-git push --tags         # push the new package version
+git checkout master                                # checkout to master branch
+git pull                                           # pull the latest changes
+npm run release                                    # generates react-components static files
+npm add .                                          # add all the files
+npm commit -m "v1.0.1 release"                     # commits all the files
+npm version patch                                  # up the patch version
+git push                                           # push the build files
+git push --tags                                    # push the new package version
 ```
 
 ## Installing the package in a project
