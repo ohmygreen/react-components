@@ -9,6 +9,10 @@ var React__default = _interopDefault(React);
 var styled = _interopDefault(require('styled-components'));
 var MaterialTextField = _interopDefault(require('@material-ui/core/TextField'));
 var MaterialButton = _interopDefault(require('@material-ui/core/Button'));
+var Fade = _interopDefault(require('@material-ui/core/Fade'));
+var Zoom = _interopDefault(require('@material-ui/core/Zoom'));
+var styles = require('@material-ui/core/styles');
+var Tooltip$1 = _interopDefault(require('@material-ui/core/Tooltip'));
 
 function _extends() {
   _extends = Object.assign || function (target) {
@@ -161,7 +165,7 @@ var SearchInput = function SearchInput(_ref) {
 
   var handleOnChange = function handleOnChange(_ref2) {
     var value = _ref2.target.value;
-    console.log('TEST3' + value);
+    console.log('TESTING 2 ' + value);
     setInputValue(value);
   };
 
@@ -175,7 +179,7 @@ var SearchInput = function SearchInput(_ref) {
 };
 
 function _templateObject$1() {
-  var data = _taggedTemplateLiteral(["\n  .MuiInputBase-input {\n    &:read-only {\n      background-color: var(--grey-100);\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  .MuiTextField-root {\n    width: 100%;\n    .MuiInputBase-input {\n      &:read-only {\n        background-color: var(--grey-100);\n      }\n    }\n  }\n"]);
 
   _templateObject$1 = function _templateObject() {
     return data;
@@ -230,6 +234,61 @@ var IconStyled = styled.div(_templateObject$3(), function (props) {
 }, function (props) {
   return !!props.onClick ? 'pointer' : 'auto';
 });
+
+var Icon = function Icon(_ref) {
+  var pathColor = _ref.pathColor,
+      onClick = _ref.onClick,
+      children = _ref.children;
+  return /*#__PURE__*/React__default.createElement(IconStyled, {
+    onClick: onClick,
+    pathColor: pathColor
+  }, children);
+};
+
+var TooltipStyled = styles.withStyles(function (theme) {
+  return {
+    tooltip: {
+      backgroundColor: theme.palette.common.white,
+      color: theme.palette.common.black,
+      boxShadow: theme.shadows[6],
+      fontSize: 11,
+      padding: '16px 10px',
+      maxWidth: 'none'
+    },
+    arrow: {
+      color: theme.palette.common.white
+    }
+  };
+})(Tooltip$1);
+
+var TooltipTitle = function TooltipTitle(_ref) {
+  var title = _ref.title;
+  return /*#__PURE__*/React__default.createElement(React__default.Fragment, null, title);
+};
+
+var Tooltip = function Tooltip(_ref2) {
+  var children = _ref2.children,
+      title = _ref2.title,
+      _ref2$placement = _ref2.placement,
+      placement = _ref2$placement === void 0 ? 'top' : _ref2$placement,
+      _ref2$arrow = _ref2.arrow,
+      arrow = _ref2$arrow === void 0 ? true : _ref2$arrow,
+      _ref2$interactive = _ref2.interactive,
+      interactive = _ref2$interactive === void 0 ? true : _ref2$interactive,
+      transition = _ref2.transition,
+      props = _objectWithoutProperties(_ref2, ["children", "title", "placement", "arrow", "interactive", "transition"]);
+
+  var transitionComponent = !!transition ? transition === 'fade' ? Fade : transition === 'zoom' ? Zoom : undefined : undefined;
+  return /*#__PURE__*/React__default.createElement(TooltipStyled, _extends({
+    title: /*#__PURE__*/React__default.createElement(TooltipTitle, {
+      title: title
+    }),
+    placement: placement,
+    interactive: interactive,
+    arrow: arrow,
+    TransitionComponent: transitionComponent
+  }, props), /*#__PURE__*/React__default.createElement("span", null, children));
+};
 
 var VisibilityIcon = function VisibilityIcon(props) {
   return /*#__PURE__*/React__default.createElement("svg", props, /*#__PURE__*/React__default.createElement("path", {
@@ -2058,6 +2117,7 @@ exports.FullscreenIcon = FullscreenIcon;
 exports.GroupAddIcon = GroupAddIcon;
 exports.HelpIcon = HelpIcon;
 exports.HomeIcon = HomeIcon;
+exports.Icon = Icon;
 exports.InfoIcon = InfoIcon;
 exports.InfoOutlineIcon = InfoOutlineIcon;
 exports.InsertChartIcon = InsertChartIcon;
@@ -2114,6 +2174,7 @@ exports.TextsmsIcon = TextsmsIcon;
 exports.ThumbDownIcon = ThumbDownIcon;
 exports.ThumbUpIcon = ThumbUpIcon;
 exports.ThumbsUpDownIcon = ThumbsUpDownIcon;
+exports.Tooltip = Tooltip;
 exports.TrendingDownIcon = TrendingDownIcon;
 exports.TrendingNeutralIcon = TrendingNeutralIcon;
 exports.TrendingUpIcon = TrendingUpIcon;

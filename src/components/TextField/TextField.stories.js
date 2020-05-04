@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { withActions } from '@storybook/addon-actions';
+import { action } from '@storybook/addon-actions';
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 
 import centered from '@storybook/addon-centered/react';
@@ -8,26 +8,26 @@ import TextField from './TextField';
 
 export default {
   title: 'Design System/Atoms/TextField',
-  decorators: [centered, withActions('onChange'), withKnobs]
+  decorators: [centered, withKnobs],
 };
 
 const currencies = [
   {
     value: 'USD',
-    label: '$'
+    label: '$',
   },
   {
     value: 'EUR',
-    label: '€'
+    label: '€',
   },
   {
     value: 'BTC',
-    label: '฿'
+    label: '฿',
   },
   {
     value: 'JPY',
-    label: '¥'
-  }
+    label: '¥',
+  },
 ];
 export const TextFieldComponent = () => {
   const isSelect = boolean('select', false);
@@ -61,7 +61,7 @@ export const TextFieldComponent = () => {
       value={text('value')}
     >
       {isSelect &&
-        currencies.map(option => (
+        currencies.map((option) => (
           <option key={option.value} value={option.value}>
             {option.label}
           </option>
@@ -88,6 +88,11 @@ export const WithDescription = () => (
 );
 export const Error = () => <TextField label="Error" variant="outlined" error />;
 export const Multiline = () => <TextField label="Multiline" variant="outlined" multiline />;
+export const ContainerWidth = () => (
+  <div style={{ width: '620px' }}>
+    <TextField label="Disabled" variant="outlined" disabled />
+  </div>
+);
 export const Select = () => (
   <TextField
     label="Select"
@@ -95,13 +100,28 @@ export const Select = () => (
     select
     helperText="Please select your currency"
     SelectProps={{
-      native: true
+      native: true,
     }}
   >
-    {currencies.map(option => (
+    {currencies.map((option) => (
       <option key={option.value} value={option.value}>
         {option.label}
       </option>
     ))}
   </TextField>
 );
+
+export const ControlledInput = () => {
+  const onChangeAction = action('onChange');
+  const [value, setValue] = useState('');
+  const handleChange = (event) => {
+    onChangeAction(event.target.value);
+    setValue(event.target.value);
+  };
+
+  return <TextField value={value} onChange={handleChange} variant="filled" />;
+};
+
+export const UncontrolledInput = () => {
+  return <TextField defaultValue={'Start Value'} onChange={action('onChange')} variant="filled" />;
+};
