@@ -6,7 +6,8 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 
 var React = require('react');
 var React__default = _interopDefault(React);
-var styled = _interopDefault(require('styled-components'));
+var styled = require('styled-components');
+var styled__default = _interopDefault(styled);
 var MaterialTextField = _interopDefault(require('@material-ui/core/TextField'));
 var MaterialButton = _interopDefault(require('@material-ui/core/Button'));
 var Fade = _interopDefault(require('@material-ui/core/Fade'));
@@ -145,7 +146,7 @@ function _templateObject() {
 
   return data;
 }
-var StyledSearchInput = styled.div(_templateObject());
+var StyledSearchInput = styled__default.div(_templateObject());
 
 var SearchInput = function SearchInput(_ref) {
   var _ref$searchValue = _ref.searchValue,
@@ -187,7 +188,7 @@ function _templateObject$1() {
 
   return data;
 }
-var TextFieldStyled = styled.div(_templateObject$1());
+var TextFieldStyled = styled__default.div(_templateObject$1());
 
 var TextField = function TextField(_ref) {
   var rest = _extends({}, _ref);
@@ -204,7 +205,7 @@ function _templateObject$2() {
 
   return data;
 }
-var ButtonStyled = styled.div(_templateObject$2());
+var ButtonStyled = styled__default.div(_templateObject$2());
 
 var Button = function Button(_ref) {
   var text = _ref.text,
@@ -229,7 +230,7 @@ function _templateObject$3() {
 
   return data;
 }
-var IconStyled = styled.div(_templateObject$3(), function (props) {
+var IconStyled = styled__default.div(_templateObject$3(), function (props) {
   return props.pathColor ? props.pathColor : '';
 }, function (props) {
   return !!props.onClick ? 'pointer' : 'auto';
@@ -288,6 +289,29 @@ var Tooltip = function Tooltip(_ref2) {
     arrow: arrow,
     TransitionComponent: transitionComponent
   }, props), /*#__PURE__*/React__default.createElement("span", null, children));
+};
+
+function _templateObject$4() {
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 100%;\n  padding: 24px 40px;\n  box-shadow: var(--elevation-1);\n  color: var(--grey-800);\n  ", "\n"]);
+
+  _templateObject$4 = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var CardStyled = styled__default.div.attrs({
+  className: 'rc-card'
+})(_templateObject$4(), function (props) {
+  return props.rounded && styled.css(["border-radius:4px;"]);
+});
+
+var Card = function Card(_ref) {
+  var rounded = _ref.rounded,
+      children = _ref.children;
+  return /*#__PURE__*/React__default.createElement(CardStyled, {
+    rounded: rounded
+  }, children);
 };
 
 var VisibilityIcon = function VisibilityIcon(props) {
@@ -2085,6 +2109,7 @@ exports.CachedIcon = CachedIcon;
 exports.CallIcon = CallIcon;
 exports.CameraAltIcon = CameraAltIcon;
 exports.CancelIcon = CancelIcon;
+exports.Card = Card;
 exports.CenterFocusStrongIcon = CenterFocusStrongIcon;
 exports.CenterFocusWeakIcon = CenterFocusWeakIcon;
 exports.CheckBoxIcon = CheckBoxIcon;
