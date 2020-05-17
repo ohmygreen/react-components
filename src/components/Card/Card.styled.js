@@ -1,6 +1,8 @@
 import styled, { css } from 'styled-components';
 
-const CardStyled = styled.div`
+const CardStyled = styled.div.attrs({
+  className: 'rc-card',
+})`
   width: 100%;
   height: 100%;
   padding: 24px 40px;
