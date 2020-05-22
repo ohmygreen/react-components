@@ -1,11 +1,13 @@
 import styled from 'styled-components';
-
-const TextFieldStyled = styled.div`
+import { colors } from '../../shared';
+const TextFieldStyled = styled.div.attrs({
+  className: 'rc-text-field',
+})`
   .MuiTextField-root {
     width: 100%;
     .MuiInputBase-input {
       &:read-only {
-        background-color: var(--grey-100);
+        background-color: ${colors.grey100};
       }
     }
   }

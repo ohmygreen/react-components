@@ -1,92 +1,94 @@
 import styled from 'styled-components';
-
-const ButtonStyled = styled.div`
+import { elevations, colors } from '../../shared';
+const ButtonStyled = styled.div.attrs({
+  className: 'rc-button',
+})`
   .MuiButtonBase-root {
     text-transform: capitalize;
     padding: 6px 16px;
   }
   .MuiButton-contained {
     &:hover {
-      box-shadow: var(--elevation-6);
+      box-shadow: ${elevations.elevation6};
     }
     &:focus {
-      outline: 1px solid var(--blue-100);
+      outline: 1px solid ${colors.blue100};
     }
     &:active {
-      box-shadow: var(--elevation-2);
+      box-shadow: ${elevations.elevation6};
     }
   }
 
   .MuiButton-outlinedPrimary {
     &:hover {
-      border-color: var(--blue-800);
-      background-color: var(--blue-50);
+      border-color: ${colors.blue800};
+      background-color: ${colors.blue50};
     }
     &:focus {
-      border-color: var(--blue-800);
-      outline: 1px solid var(--blue-100);
+      border-color: ${colors.blue800};
+      outline: 1px solid ${colors.blue100};
     }
     &:active {
-      border-color: var(--blue-800);
-      background-color: var(--blue-100);
+      border-color: ${colors.blue800};
+      background-color: ${colors.blue100};
     }
   }
 
   .MuiButton-containedSecondary {
-    background-color: var(--grey-200);
-    color: var(--grey-500);
+    background-color: ${colors.grey200};
+    color: ${colors.grey500};
     &:hover {
-      background-color: var(--grey-300);
+      background-color: ${colors.grey300};
     }
     &:focus {
-      background-color: var(--grey-200);
-      outline: 1px solid var(--blue-100);
+      background-color: ${colors.grey200};
+      outline: 1px solid ${colors.blue100};
     }
     &:active {
-      background-color: var(--grey-400);
+      background-color: ${colors.grey400};
     }
   }
 
   .MuiButton-outlinedSecondary {
-    border-color: var(--grey-500);
-    color: var(--grey-500);
+    border-color: ${colors.grey500};
+    color: ${colors.grey500};
     &:hover {
       border-color: transparent;
-      background-color: var(--grey-100);
+      background-color: ${colors.grey100};
     }
     &:focus {
       border-color: transparent;
-      outline: 1px solid var(--blue-100);
+      outline: 1px solid ${colors.blue100};
     }
     &:active {
       border-color: transparent;
-      background-color: var(--grey-200);
+      background-color: ${colors.grey200};
     }
   }
 
   .MuiButton-textPrimary {
     &:hover {
-      background-color: var(--blue-50);
+      background-color: ${colors.blue50};
     }
     &:focus {
       background-color: transparent;
-      outline: 1px solid var(--blue-100) !important;
+      outline: 1px solid ${colors.blue100} !important;
     }
     &:active {
-      background-color: var(--blue-100);
+      background-color: ${colors.blue100};
     }
   }
 
   .MuiButton-textSecondary {
     &:hover {
-      background-color: var(--grey-100);
+      background-color: ${colors.grey100};
     }
     &:focus {
       background-color: transparent;
-      outline: 1px solid var(--blue-100);
+      outline: 1px solid ${colors.blue100};
     }
     &:active {
-      background-color: var(--grey-200);
+      background-color: ${colors.grey200};
     }
   }
 `;

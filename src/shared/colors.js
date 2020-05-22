@@ -1,6 +1,4 @@
-import { css } from 'styled-components';
-
-export const colorsPallete = {
+export const colors = {
   grey900: '#0a0c0d',
   grey800: '#2b2c2d',
   grey700: '#484a4b',
@@ -53,64 +51,3 @@ export const colorsPallete = {
   blue50: '#e3f2fd',
   white: '#ffffff',
 };
-
-export const colorsCSS = css`
-  --white: ${colorsPallete.white};
-  --grey-900: ${colorsPallete.grey900};
-  --grey-800: ${colorsPallete.grey800};
-  --grey-700: ${colorsPallete.grey700};
-  --grey-600: ${colorsPallete.grey600};
-  --grey-500: ${colorsPallete.grey500};
-  --grey-400: ${colorsPallete.grey400};
-  --grey-300: ${colorsPallete.grey300};
-  --grey-200: ${colorsPallete.grey200};
-  --grey-100: ${colorsPallete.grey100};
-  --grey-50: ${colorsPallete.grey50};
-  --red-900: ${colorsPallete.red900};
-  --red-800: ${colorsPallete.red800};
-  --red-700: ${colorsPallete.red700};
-  --red-600: ${colorsPallete.red600};
-  --red-500: ${colorsPallete.red500};
-  --red-400: ${colorsPallete.red400};
-  --red-300: ${colorsPallete.red300};
-  --red-200: ${colorsPallete.red200};
-  --red-100: ${colorsPallete.red100};
-  --red-50: ${colorsPallete.red50};
-  --yellow-900: ${colorsPallete.yellow900};
-  --yellow-800: ${colorsPallete.yellow800};
-  --yellow-700: ${colorsPallete.yellow700};
-  --yellow-600: ${colorsPallete.yellow600};
-  --yellow-500: ${colorsPallete.yellow500};
-  --yellow-400: ${colorsPallete.yellow400};
-  --yellow-300: ${colorsPallete.yellow300};
-  --yellow-200: ${colorsPallete.yellow200};
-  --yellow-100: ${colorsPallete.yellow100};
-  --yellow-50: ${colorsPallete.yellow50};
-  --green-900: ${colorsPallete.green900};
-  --green-800: ${colorsPallete.green800};
-  --green-700: ${colorsPallete.green700};
-  --green-600: ${colorsPallete.green600};
-  --green-500: ${colorsPallete.green500};
-  --green-400: ${colorsPallete.green400};
-  --green-300: ${colorsPallete.green300};
-  --green-200: ${colorsPallete.green200};
-  --green-100: ${colorsPallete.green100};
-  --green-50: ${colorsPallete.green50};
-  --blue-900: ${colorsPallete.blue900};
-  --blue-800: ${colorsPallete.blue800};
-  --blue-700: ${colorsPallete.blue700};
-  --blue-600: ${colorsPallete.blue600};
-  --blue-500: ${colorsPallete.blue500};
-  --blue-400: ${colorsPallete.blue400};
-  --blue-300: ${colorsPallete.blue300};
-  --blue-200: ${colorsPallete.blue200};
-  --blue-100: ${colorsPallete.blue100};
-  --blue-50: ${colorsPallete.blue50};
-  --color-positive: var(--green-800);
-  --color-positive-bg: var(--green-50);
-  --color-negative: var(--red-800);
-  --color-negative-bg: var(--red-50);
-  --color-warning: var(--yellow-800);
-  --color-info: var(--blue-800);
-  --color-info-bg: var(--blue-50);
-`;

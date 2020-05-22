@@ -1,13 +1,13 @@
-import { colorsPallete } from './';
+import { colors } from './';
 
 export const materialUiPalette = {
   primary: {
-    main: colorsPallete.blue800,
-    dark: colorsPallete.blue900,
-    contrastText: colorsPallete.white,
+    main: colors.blue800,
+    dark: colors.blue900,
+    contrastText: colors.white,
   },
   secondary: {
-    main: colorsPallete.grey500,
-    dark: colorsPallete.grey600,
+    main: colors.grey500,
+    dark: colors.grey600,
   },
 };

@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-const IconStyled = styled.div`
+const IconStyled = styled.div.attrs({
+  className: 'rc-icon',
+})`
   svg {
     path {
       fill: ${(props) => (props.pathColor ? props.pathColor : '')};

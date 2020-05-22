@@ -12,7 +12,7 @@ const SearchInput = ({ searchValue = '', onChange }) => {
   }, [inputValue, onChange]);
 
   const handleOnChange = ({ target: { value } }) => {
-    console.log('TESTING 2 ' + value);
+    console.log('TESTING 3 ' + value);
     setInputValue(value);
   };
 

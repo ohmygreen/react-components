@@ -1,5 +1,5 @@
 import React from 'react';
-import { colorsPallete } from '../shared/colors';
+import { colors } from '../shared/colors';
 
 export function iconTitle(iconName) {
   return (
@@ -8,7 +8,7 @@ export function iconTitle(iconName) {
         display: 'block',
         padding: '5px',
         borderRadius: '3px',
-        backgroundColor: colorsPallete.grey100,
+        backgroundColor: colors.grey100,
       }}
     >
       import {`{ ${iconName} }`} from 'react-components'

@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { colors, elevations } from '../../shared';
 
 const CardStyled = styled.div.attrs({
   className: 'rc-card',
@@ -6,8 +7,9 @@ const CardStyled = styled.div.attrs({
   width: 100%;
   height: 100%;
   padding: 24px 40px;
-  box-shadow: var(--elevation-1);
-  color: var(--grey-800);
+  box-shadow: ${elevations.elevation1};
+  color: ${colors.grey800};
+  background-color: ${colors.white};
   ${(props) =>
     props.rounded &&
     css`
