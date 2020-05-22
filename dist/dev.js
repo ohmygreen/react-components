@@ -256,7 +256,9 @@ function _templateObject$1() {
 
   return data;
 }
-var TextFieldStyled = styled__default.div(_templateObject$1(), colors.grey100);
+var TextFieldStyled = styled__default.div.attrs({
+  className: 'rc-text-field'
+})(_templateObject$1(), colors.grey100);
 
 var TextField = function TextField(_ref) {
   var rest = _extends({}, _ref);
@@ -273,7 +275,9 @@ function _templateObject$2() {
 
   return data;
 }
-var ButtonStyled = styled__default.div(_templateObject$2(), elevations.elevation6, colors.blue100, elevations.elevation6, colors.blue800, colors.blue50, colors.blue800, colors.blue100, colors.blue800, colors.blue100, colors.grey200, colors.grey500, colors.grey300, colors.grey200, colors.blue100, colors.grey400, colors.grey500, colors.grey500, colors.grey100, colors.blue100, colors.grey200, colors.blue50, colors.blue100, colors.blue100, colors.grey100, colors.blue100, colors.grey200);
+var ButtonStyled = styled__default.div.attrs({
+  className: 'rc-button'
+})(_templateObject$2(), elevations.elevation6, colors.blue100, elevations.elevation6, colors.blue800, colors.blue50, colors.blue800, colors.blue100, colors.blue800, colors.blue100, colors.grey200, colors.grey500, colors.grey300, colors.grey200, colors.blue100, colors.grey400, colors.grey500, colors.grey500, colors.grey100, colors.blue100, colors.grey200, colors.blue50, colors.blue100, colors.blue100, colors.grey100, colors.blue100, colors.grey200);
 
 var Button = function Button(_ref) {
   var text = _ref.text,
@@ -298,7 +302,9 @@ function _templateObject$3() {
 
   return data;
 }
-var IconStyled = styled__default.div(_templateObject$3(), function (props) {
+var IconStyled = styled__default.div.attrs({
+  className: 'rc-icon'
+})(_templateObject$3(), function (props) {
   return props.pathColor ? props.pathColor : '';
 }, function (props) {
   return !!props.onClick ? 'pointer' : 'auto';

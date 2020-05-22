@@ -28,7 +28,6 @@
     "babel-loader": "^8.0.6",
     "babel-plugin-inline-react-svg": "^1.1.1",
     "babel-plugin-styled-components": "^1.10.7",
-    "husky": "^4.2.3",
     "postcss-css-variables": "^0.17.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
@@ -47,11 +46,6 @@
     "react": ">= 16.x.x",
     "styled-components": "^5.0.0",
     "@material-ui/core": "^4.9.8"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run release"
-    }
   },
   "dependencies": {
     "http-server": "^0.12.1"
