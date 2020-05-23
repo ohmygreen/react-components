@@ -1,9 +1,9 @@
 import styled, { css } from 'styled-components';
 import { colors, elevations } from '../../shared';
 
-const CardStyled = styled.div.attrs({
-  className: 'rc-card',
-})`
+const CardStyled = styled.div.attrs((props) => ({
+  className: `rc-card ${props.className ? props.className : ''}`,
+}))`
   width: 100%;
   height: 100%;
   padding: 24px 40px;

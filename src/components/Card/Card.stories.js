@@ -13,4 +13,8 @@ export default {
 export const CardComponent = () => (
   <Card rounded={boolean('rounded', false)}>Some text inside the card</Card>
 );
-export const Rounded = () => <Card rounded>Some text inside the card</Card>;
+export const Rounded = () => (
+  <Card className="testing-class" rounded>
+    Some text inside the card
+  </Card>
+);

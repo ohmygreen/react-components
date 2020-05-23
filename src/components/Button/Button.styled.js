@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { elevations, colors } from '../../shared';
-const ButtonStyled = styled.div.attrs({
-  className: 'rc-button',
-})`
+const ButtonStyled = styled.div.attrs((props) => ({
+  className: `rc-button ${props.className ? props.className : ''}`,
+}))`
   .MuiButtonBase-root {
     text-transform: capitalize;
     padding: 6px 16px;
