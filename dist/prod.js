@@ -256,8 +256,10 @@ function _templateObject$1() {
 
   return data;
 }
-var TextFieldStyled = styled__default.div.attrs({
-  className: 'rc-text-field'
+var TextFieldStyled = styled__default.div.attrs(function (props) {
+  return {
+    className: "rc-text-field ".concat(props.className ? props.className : '')
+  };
 })(_templateObject$1(), colors.grey100);
 
 var TextField = function TextField(_ref) {
@@ -275,8 +277,10 @@ function _templateObject$2() {
 
   return data;
 }
-var ButtonStyled = styled__default.div.attrs({
-  className: 'rc-button'
+var ButtonStyled = styled__default.div.attrs(function (props) {
+  return {
+    className: "rc-button ".concat(props.className ? props.className : '')
+  };
 })(_templateObject$2(), elevations.elevation6, colors.blue100, elevations.elevation6, colors.blue800, colors.blue50, colors.blue800, colors.blue100, colors.blue800, colors.blue100, colors.grey200, colors.grey500, colors.grey300, colors.grey200, colors.blue100, colors.grey400, colors.grey500, colors.grey500, colors.grey100, colors.blue100, colors.grey200, colors.blue50, colors.blue100, colors.blue100, colors.grey100, colors.blue100, colors.grey200);
 
 var Button = function Button(_ref) {
@@ -302,8 +306,10 @@ function _templateObject$3() {
 
   return data;
 }
-var IconStyled = styled__default.div.attrs({
-  className: 'rc-icon'
+var IconStyled = styled__default.div.attrs(function (props) {
+  return {
+    className: "rc-icon ".concat(props.className ? props.className : '')
+  };
 })(_templateObject$3(), function (props) {
   return props.pathColor ? props.pathColor : '';
 }, function (props) {
@@ -374,17 +380,21 @@ function _templateObject$4() {
 
   return data;
 }
-var CardStyled = styled__default.div.attrs({
-  className: 'rc-card'
+var CardStyled = styled__default.div.attrs(function (props) {
+  return {
+    className: "rc-card ".concat(props.className ? props.className : '')
+  };
 })(_templateObject$4(), elevations.elevation1, colors.grey800, colors.white, function (props) {
   return props.rounded && styled.css(["border-radius:4px;"]);
 });
 
 var Card = function Card(_ref) {
   var rounded = _ref.rounded,
-      children = _ref.children;
+      children = _ref.children,
+      className = _ref.className;
   return /*#__PURE__*/React__default.createElement(CardStyled, {
-    rounded: rounded
+    rounded: rounded,
+    className: className
   }, children);
 };
 
