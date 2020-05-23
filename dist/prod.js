@@ -6,7 +6,8 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 
 var React = require('react');
 var React__default = _interopDefault(React);
-var styled = _interopDefault(require('styled-components'));
+var styled = require('styled-components');
+var styled__default = _interopDefault(styled);
 var MaterialTextField = _interopDefault(require('@material-ui/core/TextField'));
 var MaterialButton = _interopDefault(require('@material-ui/core/Button'));
 var Fade = _interopDefault(require('@material-ui/core/Fade'));
@@ -145,7 +146,7 @@ function _templateObject() {
 
   return data;
 }
-var StyledSearchInput = styled.div(_templateObject());
+var StyledSearchInput = styled__default.div(_templateObject());
 
 var SearchInput = function SearchInput(_ref) {
   var _ref$searchValue = _ref.searchValue,
@@ -165,7 +166,7 @@ var SearchInput = function SearchInput(_ref) {
 
   var handleOnChange = function handleOnChange(_ref2) {
     var value = _ref2.target.value;
-    console.log('TESTING 2 ' + value);
+    console.log('TESTING 3 ' + value);
     setInputValue(value);
   };
 
@@ -178,8 +179,76 @@ var SearchInput = function SearchInput(_ref) {
   })));
 };
 
+var colors = {
+  grey900: '#0a0c0d',
+  grey800: '#2b2c2d',
+  grey700: '#484a4b',
+  grey600: '#646869',
+  grey500: '#818587',
+  grey400: '#9ea3a5',
+  grey300: '#bcc1c3',
+  grey200: '#dadfe1',
+  grey100: '#e9eef0',
+  grey50: '#f5f9fa',
+  red900: '#b71c1c',
+  red800: '#c62828',
+  red700: '#d32f2f',
+  red600: '#e53935',
+  red500: '#f44336',
+  red400: '#ef5350',
+  red300: '#e57373',
+  red200: '#ef9a9a',
+  red100: '#ffcdd2',
+  red50: '#ffebee',
+  yellow900: '#ff6f00',
+  yellow800: '#ff8f00',
+  yellow700: '#ffa000',
+  yellow600: '#ffb300',
+  yellow500: '#ffc107',
+  yellow400: '#ffca28',
+  yellow300: '#ffd54f',
+  yellow200: '#ffe082',
+  yellow100: '#ffecb3',
+  yellow50: '#fff8e1',
+  green900: '#00682f',
+  green800: '#018843',
+  green700: '#0d994f',
+  green600: '#1bac5b',
+  green500: '#23bc65',
+  green400: '#4fc67e',
+  green300: '#72d194',
+  green200: '#9dddb3',
+  green100: '#c5ebd0',
+  green50: '#e6f8ec',
+  blue900: '#0d47a1',
+  blue800: '#1565c0',
+  blue700: '#1976d2',
+  blue600: '#1e88e5',
+  blue500: '#2196f3',
+  blue400: '#42a5f5',
+  blue300: '#64b5f6',
+  blue200: '#90caf9',
+  blue100: '#bbdefb',
+  blue50: '#e3f2fd',
+  white: '#ffffff'
+};
+
+var elevations = {
+  elevation0: 'none',
+  elevation1: "0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 1px -1px rgba(0, 0, 0, 0.12),\n    0 1px 1px 0 rgba(0, 0, 0, 0.14)",
+  elevation2: "0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 1px -2px rgba(0, 0, 0, 0.12),\n    0 2px 2px 0 rgba(0, 0, 0, 0.14)",
+  elevation3: "0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 3px -2px rgba(0, 0, 0, 0.12),\n    0 3px 4px 0 rgba(0, 0, 0, 0.14)",
+  elevation4: "0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 1px 10px 0 rgba(0, 0, 0, 0.12),\n    0 4px 5px 0 rgba(0, 0, 0, 0.14)",
+  elevation6: "0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 1px 18px 0 rgba(0, 0, 0, 0.12),\n    0 6px 10px 0 rgba(0, 0, 0, 0.14)",
+  elevation8: "0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 3px 14px 2px rgba(0, 0, 0, 0.12),\n    0 8px 10px 1px rgba(0, 0, 0, 0.14)",
+  elevation10: "0 7px 7px -3px rgba(0, 0, 0, 0.2), 0 3px 16px 2px rgba(0, 0, 0, 0.12),\n    0 10px 12px 1px rgba(0, 0, 0, 0.14)",
+  elevation12: "0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 5px 22px 4px rgba(0, 0, 0, 0.12),\n    0 12px 17px 2px rgba(0, 0, 0, 0.14)",
+  elevation16: "0 8px 10px -5px rgba(0, 0, 0, 0.2), 0 6px 30px 5px rgba(0, 0, 0, 0.12),\n    0 16px 24px 2px rgba(0, 0, 0, 0.14)",
+  elevation24: "0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 9px 46px 8px rgba(0, 0, 0, 0.12),\n    0 24px 38px 3px rgba(0, 0, 0, 0.14),"
+};
+
 function _templateObject$1() {
-  var data = _taggedTemplateLiteral(["\n  .MuiTextField-root {\n    width: 100%;\n    .MuiInputBase-input {\n      &:read-only {\n        background-color: var(--grey-100);\n      }\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  .MuiTextField-root {\n    width: 100%;\n    .MuiInputBase-input {\n      &:read-only {\n        background-color: ", ";\n      }\n    }\n  }\n"]);
 
   _templateObject$1 = function _templateObject() {
     return data;
@@ -187,7 +256,11 @@ function _templateObject$1() {
 
   return data;
 }
-var TextFieldStyled = styled.div(_templateObject$1());
+var TextFieldStyled = styled__default.div.attrs(function (props) {
+  return {
+    className: "rc-text-field ".concat(props.className ? props.className : '')
+  };
+})(_templateObject$1(), colors.grey100);
 
 var TextField = function TextField(_ref) {
   var rest = _extends({}, _ref);
@@ -196,7 +269,7 @@ var TextField = function TextField(_ref) {
 };
 
 function _templateObject$2() {
-  var data = _taggedTemplateLiteral(["\n  .MuiButtonBase-root {\n    text-transform: capitalize;\n    padding: 6px 16px;\n  }\n  .MuiButton-contained {\n    &:hover {\n      box-shadow: var(--elevation-6);\n    }\n    &:focus {\n      outline: 1px solid var(--blue-100);\n    }\n    &:active {\n      box-shadow: var(--elevation-2);\n    }\n  }\n\n  .MuiButton-outlinedPrimary {\n    &:hover {\n      border-color: var(--blue-800);\n      background-color: var(--blue-50);\n    }\n    &:focus {\n      border-color: var(--blue-800);\n      outline: 1px solid var(--blue-100);\n    }\n    &:active {\n      border-color: var(--blue-800);\n      background-color: var(--blue-100);\n    }\n  }\n\n  .MuiButton-containedSecondary {\n    background-color: var(--grey-200);\n    color: var(--grey-500);\n    &:hover {\n      background-color: var(--grey-300);\n    }\n    &:focus {\n      background-color: var(--grey-200);\n      outline: 1px solid var(--blue-100);\n    }\n    &:active {\n      background-color: var(--grey-400);\n    }\n  }\n\n  .MuiButton-outlinedSecondary {\n    border-color: var(--grey-500);\n    color: var(--grey-500);\n    &:hover {\n      border-color: transparent;\n      background-color: var(--grey-100);\n    }\n    &:focus {\n      border-color: transparent;\n      outline: 1px solid var(--blue-100);\n    }\n    &:active {\n      border-color: transparent;\n      background-color: var(--grey-200);\n    }\n  }\n\n  .MuiButton-textPrimary {\n    &:hover {\n      background-color: var(--blue-50);\n    }\n    &:focus {\n      background-color: transparent;\n      outline: 1px solid var(--blue-100) !important;\n    }\n    &:active {\n      background-color: var(--blue-100);\n    }\n  }\n\n  .MuiButton-textSecondary {\n    &:hover {\n      background-color: var(--grey-100);\n    }\n    &:focus {\n      background-color: transparent;\n      outline: 1px solid var(--blue-100);\n    }\n    &:active {\n      background-color: var(--grey-200);\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  .MuiButtonBase-root {\n    text-transform: capitalize;\n    padding: 6px 16px;\n  }\n  .MuiButton-contained {\n    &:hover {\n      box-shadow: ", ";\n    }\n    &:focus {\n      outline: 1px solid ", ";\n    }\n    &:active {\n      box-shadow: ", ";\n    }\n  }\n\n  .MuiButton-outlinedPrimary {\n    &:hover {\n      border-color: ", ";\n      background-color: ", ";\n    }\n    &:focus {\n      border-color: ", ";\n      outline: 1px solid ", ";\n    }\n    &:active {\n      border-color: ", ";\n      background-color: ", ";\n    }\n  }\n\n  .MuiButton-containedSecondary {\n    background-color: ", ";\n    color: ", ";\n    &:hover {\n      background-color: ", ";\n    }\n    &:focus {\n      background-color: ", ";\n      outline: 1px solid ", ";\n    }\n    &:active {\n      background-color: ", ";\n    }\n  }\n\n  .MuiButton-outlinedSecondary {\n    border-color: ", ";\n    color: ", ";\n    &:hover {\n      border-color: transparent;\n      background-color: ", ";\n    }\n    &:focus {\n      border-color: transparent;\n      outline: 1px solid ", ";\n    }\n    &:active {\n      border-color: transparent;\n      background-color: ", ";\n    }\n  }\n\n  .MuiButton-textPrimary {\n    &:hover {\n      background-color: ", ";\n    }\n    &:focus {\n      background-color: transparent;\n      outline: 1px solid ", " !important;\n    }\n    &:active {\n      background-color: ", ";\n    }\n  }\n\n  .MuiButton-textSecondary {\n    &:hover {\n      background-color: ", ";\n    }\n    &:focus {\n      background-color: transparent;\n      outline: 1px solid ", ";\n    }\n    &:active {\n      background-color: ", ";\n    }\n  }\n"]);
 
   _templateObject$2 = function _templateObject() {
     return data;
@@ -204,7 +277,11 @@ function _templateObject$2() {
 
   return data;
 }
-var ButtonStyled = styled.div(_templateObject$2());
+var ButtonStyled = styled__default.div.attrs(function (props) {
+  return {
+    className: "rc-button ".concat(props.className ? props.className : '')
+  };
+})(_templateObject$2(), elevations.elevation6, colors.blue100, elevations.elevation6, colors.blue800, colors.blue50, colors.blue800, colors.blue100, colors.blue800, colors.blue100, colors.grey200, colors.grey500, colors.grey300, colors.grey200, colors.blue100, colors.grey400, colors.grey500, colors.grey500, colors.grey100, colors.blue100, colors.grey200, colors.blue50, colors.blue100, colors.blue100, colors.grey100, colors.blue100, colors.grey200);
 
 var Button = function Button(_ref) {
   var text = _ref.text,
@@ -229,7 +306,11 @@ function _templateObject$3() {
 
   return data;
 }
-var IconStyled = styled.div(_templateObject$3(), function (props) {
+var IconStyled = styled__default.div.attrs(function (props) {
+  return {
+    className: "rc-icon ".concat(props.className ? props.className : '')
+  };
+})(_templateObject$3(), function (props) {
   return props.pathColor ? props.pathColor : '';
 }, function (props) {
   return !!props.onClick ? 'pointer' : 'auto';
@@ -288,6 +369,33 @@ var Tooltip = function Tooltip(_ref2) {
     arrow: arrow,
     TransitionComponent: transitionComponent
   }, props), /*#__PURE__*/React__default.createElement("span", null, children));
+};
+
+function _templateObject$4() {
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 100%;\n  padding: 24px 40px;\n  box-shadow: ", ";\n  color: ", ";\n  background-color: ", ";\n  ", "\n"]);
+
+  _templateObject$4 = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var CardStyled = styled__default.div.attrs(function (props) {
+  return {
+    className: "rc-card ".concat(props.className ? props.className : '')
+  };
+})(_templateObject$4(), elevations.elevation1, colors.grey800, colors.white, function (props) {
+  return props.rounded && styled.css(["border-radius:4px;"]);
+});
+
+var Card = function Card(_ref) {
+  var rounded = _ref.rounded,
+      children = _ref.children,
+      className = _ref.className;
+  return /*#__PURE__*/React__default.createElement(CardStyled, {
+    rounded: rounded,
+    className: className
+  }, children);
 };
 
 var VisibilityIcon = function VisibilityIcon(props) {
@@ -2085,6 +2193,7 @@ exports.CachedIcon = CachedIcon;
 exports.CallIcon = CallIcon;
 exports.CameraAltIcon = CameraAltIcon;
 exports.CancelIcon = CancelIcon;
+exports.Card = Card;
 exports.CenterFocusStrongIcon = CenterFocusStrongIcon;
 exports.CenterFocusWeakIcon = CenterFocusWeakIcon;
 exports.CheckBoxIcon = CheckBoxIcon;
