@@ -248,7 +248,7 @@ var elevations = {
 };
 
 function _templateObject$1() {
-  var data = _taggedTemplateLiteral(["\n  .MuiTextField-root {\n    width: 100%;\n    .MuiInputBase-input {\n      &:read-only {\n        background-color: ", ";\n      }\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  .MuiTextField-root {\n    width: 100%;\n    .MuiInputBase-input {\n      padding: 27px 12px 10px;\n    }\n    .MuiInputLabel-root {\n      transform: translate(12px, 10px) scale(0.75);\n    }\n    .MuiInputLabel-outlined.MuiInputLabel-shrink {\n      transform: translate(14px, -6px) scale(0.75);\n    }\n    label + .MuiInput-formControl {\n      margin-top: 0;\n    }\n    .MuiFilledInput-root {\n      &:read-only {\n        background-color: ", ";\n      }\n    }\n  }\n"]);
 
   _templateObject$1 = function _templateObject() {
     return data;
@@ -260,7 +260,7 @@ var TextFieldStyled = styled__default.div.attrs(function (props) {
   return {
     className: "rc-text-field ".concat(props.className ? props.className : '')
   };
-})(_templateObject$1(), colors.grey100);
+})(_templateObject$1(), colors.grey50);
 
 var TextField = function TextField(_ref) {
   var rest = _extends({}, _ref);
