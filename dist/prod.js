@@ -14,6 +14,8 @@ var Fade = _interopDefault(require('@material-ui/core/Fade'));
 var Zoom = _interopDefault(require('@material-ui/core/Zoom'));
 var styles = require('@material-ui/core/styles');
 var Tooltip$1 = _interopDefault(require('@material-ui/core/Tooltip'));
+var ReactDatePicker = _interopDefault(require('react-datepicker'));
+require('react-datepicker/dist/react-datepicker.css');
 
 function _extends() {
   _extends = Object.assign || function (target) {
@@ -396,6 +398,30 @@ var Card = function Card(_ref) {
     rounded: rounded,
     className: className
   }, children);
+};
+
+function _templateObject$5() {
+  var data = _taggedTemplateLiteral(["\n\n\t.react-datepicker__tab-loop { \n\t\tdisplay: inherit;\n  }\n\n\t.react-datepicker__week-number{\n\t\tcolor: #02242f;\n  }\n\n\t.react-datepicker {\n\t\tfont-family: 'Roboto', 'Brandon-Text', 'Helvetica Neue', sans-serif;\n\t\tpadding: 14px;\n\n\t\t.react-datepicker__navigation {\n\t\t\ttop: 21px;\n    }\n\n    .react-datepicker__year-wrapper {\n      max-width: 195px;\n    }\n\n\t\t.react-datepicker__header {\n\t\t\tbackground-color: #fff;\n\t\t\tborder-bottom: 0;\n\t\t\tpadding-top: 4px;\n\n\t\t\t.react-datepicker__current-month, &.react-datepicker-year-header {\n\t\t\t\tcolor: ", ";\n\t\t\t\tfont-weight: 500;\n      }\n\n\t\t\t.react-datepicker__day-names {\n\t\t\t\tmargin: 14px 0 8px 0;\n\t\t\t\ttext-transform: uppercase;\n      \n\t\t\t\t.react-datepicker__day-name {\n\t\t\t\t\tcolor: ", ";\n\t\t\t\t\tfont-weight: bold;\n\t\t\t\t\tmargin: 4px;\n        }\n      }\n    }\n\n\t\t.react-datepicker__month {\n\t\t\tmargin-bottom: 0;\n    }\n\n\t\t.react-datepicker__day-name, \n    .react-datepicker__month-text,\n    .react-datepicker__quarter-text,\n    .react-datepicker__year-text {\n\t\t\tcolor: ", ";\n\t\t\tfont-size: 12px;\n      display: inline-block;\n      line-height: 1.7rem;\n      text-align: center;\n    }\n\n    \n    .react-datepicker__month--selected, \n    .react-datepicker__month--in-selecting-range, \n    .react-datepicker__month--in-range, \n    .react-datepicker__quarter--selected, \n    .react-datepicker__quarter--in-selecting-range, \n    .react-datepicker__quarter--in-range,\n    .react-datepicker__day--selected, \n    .react-datepicker__day--in-selecting-range, \n    .react-datepicker__day--in-range, \n    .react-datepicker__month-text--selected, \n    .react-datepicker__month--selected,\n    .react-datepicker__month-text--in-selecting-range, \n    .react-datepicker__month-text--in-range, \n    .react-datepicker__quarter-text--selected, \n    .react-datepicker__quarter-text--in-selecting-range, \n    .react-datepicker__quarter-text--in-range, \n    .react-datepicker__year-text--selected, \n    .react-datepicker__year-text--in-selecting-range, \n    .react-datepicker__year-text--in-range {\n      color: #fff;\n      font-weight: 500;\n    }\n\n\t\t.react-datepicker__day, .react-datepicker__month-text, .react-datepicker__quarter-text, .react-datepicker__year-text {\n\t\t\tmargin: 4px;\n\t\t\toutline: none;\n    }\n\t\t\t\n\t\t.react-datepicker__year-text {\n\t\t\tmargin: 4px 0;\n    }\n\n\t\t.react-datepicker__day--outside-month {\n\t\t\tcolor: ", ";\n    }\n  }\n"]);
+
+  _templateObject$5 = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var DatePickerStyled = styled__default.div.attrs(function (props) {
+  return {
+    className: "rc-date-picker ".concat(props.className ? props.className : '')
+  };
+})(_templateObject$5(), colors.grey600, colors.grey400, colors.grey800, colors.grey400);
+
+var DatePicker = function DatePicker(_ref) {
+  var className = _ref.className,
+      rest = _objectWithoutProperties(_ref, ["className"]);
+
+  return /*#__PURE__*/React__default.createElement(DatePickerStyled, {
+    className: className
+  }, /*#__PURE__*/React__default.createElement(ReactDatePicker, rest));
 };
 
 var VisibilityIcon = function VisibilityIcon(props) {
@@ -2206,6 +2232,7 @@ exports.CommentIcon = CommentIcon;
 exports.ContentCopyIcon = ContentCopyIcon;
 exports.CreateIcon = CreateIcon;
 exports.CropFreeIcon = CropFreeIcon;
+exports.DatePicker = DatePicker;
 exports.DeleteIcon = DeleteIcon;
 exports.DoneAllIcon = DoneAllIcon;
 exports.DoneIcon = DoneIcon;
