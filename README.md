@@ -71,8 +71,8 @@ To make a test build for a new feature
 git checkout feature/select-component             # feature we want to make a test build
 git checkout beta/select-component                # we make a beta branch which will be used only for tagging
 npm run release                                   # generates react-components static files
-npm add .                                         # add all the files
-npm commit -m "adding select component"           # commits all the files
+git add .                                         # add all the files
+git commit -m "adding select component"           # commits all the files
 npm version prerelease --preid=select-component   # generates beta tag
 git push --tags                                   # pushes the tag to github
 ```
@@ -85,8 +85,8 @@ This will create a new tag which can be used to to download exactly this version
 git checkout master                                # checkout to master branch
 git pull                                           # pull the latest changes
 npm run release                                    # generates react-components static files
-npm add .                                          # add all the files
-npm commit -m "v1.0.1 release"                     # commits all the files
+git add .                                          # add all the files
+git commit -m "v1.0.1 release"                     # commits all the files
 npm version patch                                  # up the patch version
 git push                                           # push the build files
 git push --tags                                    # push the new package version
