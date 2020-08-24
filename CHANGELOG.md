@@ -17,3 +17,7 @@ First release of the library
 
 - Card component
 - Removing css variables from usage
+
+## 1.0.4
+
+- Date Picker component
