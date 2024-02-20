@@ -50,8 +50,5 @@
   },
   "dependencies": {
     "http-server": "^0.12.1"
-  },
-  "engines": {
-    "node": "10.16.3"
   }
 }
